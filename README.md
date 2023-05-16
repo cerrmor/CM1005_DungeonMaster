@@ -1,4 +1,4 @@
-# CM1005_DungeonMaster
+# CM1005_EnterTheExplorer
 
 A game built with p5.js and JavaScript that heralds back to classic side scroller games.
 
