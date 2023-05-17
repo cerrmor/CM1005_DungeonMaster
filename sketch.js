@@ -28,6 +28,10 @@ var platformTexture;
 var platform
 var enemies;
 
+//start game veriables
+var startGame_button;
+var gameIsStarted = false;
+
 //object of basic game stats
 var gameStats;
 
@@ -109,9 +113,21 @@ function setup()
     
     //builds the background arry only when the game starts
     backgroundArray();
-    
+
+
     //start of game mechanics.
     startGame();
+    startGame_button = createButton("Start Game");
+    startGame_button.position(width, height);
+    startGame_button.mouseClicked(gameStart);
+}
+function gameStart()
+{
+    gameIsStarted = true;
+    backgroundSound.loop();
+    backgroundSoundIsLooping = true;
+    startGame_button.remove();
+    loop();
 }
 
 function startGame ()
@@ -134,7 +150,7 @@ function startGame ()
     }
     
     //logic to start the background music after gameover
-    if(!backgroundSoundIsLooping)
+    if(!backgroundSoundIsLooping && gameIsStarted)
     {
         backgroundSound.loop();
         backgroundSoundIsLooping = true;
@@ -159,6 +175,8 @@ function startGame ()
 
 function draw()
 {
+    if(!gameIsStarted)noLoop();
+    
     //draws the background, platforms and collectables
     drawBackground();
     
