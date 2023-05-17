@@ -118,7 +118,8 @@ function setup()
     //start of game mechanics.
     startGame();
     startGame_button = createButton("Start Game");
-    startGame_button.position(width, height);
+    startGame_button.position(width/2.5, height/2);
+    startGame_button.style('font-size', '40px')
     startGame_button.mouseClicked(gameStart);
 }
 function gameStart()
