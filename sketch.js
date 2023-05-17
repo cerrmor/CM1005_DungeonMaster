@@ -61,7 +61,7 @@ function preload()
     background = loadImage('assets/png/BG/BG.png');
     for(var i = 0; i < 6; i++)
     {
-        groundTextures[i] = loadImage('assets/png/tiles/'+ i + '.png');
+        groundTextures[i] = loadImage('assets/png/Tiles/'+ i + '.png');
     }
     
     //adds scenery images
