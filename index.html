@@ -4,17 +4,23 @@
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="sketch.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
-    <style>body {padding: 0; margin: 0; }</style>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div>
-      <h1>Instructions</h1>
-      <p>Press the Start button to begin</p>
-      <p>Movement Controlls:</p>
-      <p>arrows: <strong>Up, Down, Left, Right</strong></p>
-      <p>jump: <strong>spacebar</strong></p>
+    <div class="gridContainer">
+      <div id="canvas">
+        <!-- container for the game canvas and start button -->
+      </div>
+      <div id="instructions">
+        <h1>Instructions</h1>
+        <p>Press the Start button to begin</p>
+        <p>Movement Controlls:</p>
+        <p>arrows: <strong>Up, Down, Left, Right</strong></p>
+        <p>jump: <strong>spacebar</strong></p>
+      </div>
     </div>
   </body>
 </html>

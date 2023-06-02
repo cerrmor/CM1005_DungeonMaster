@@ -4,6 +4,9 @@ Using available open source sound files with creative commons licences, I added 
 
 Using the tutorial lecture I added an enemy constructor function to my game. Adding enemies to my game was a lot of fun, it added an extra dynamic risk that changed the game. I enjoyed adding logic to make the enemy’s jump over the pits, and it was good practice debugging this, when it didn't perform as expected. It was also good to practice the collision detection as it was necessary to change it as the shape of my enemy changed*/
 
+//canvas veriable
+var c;
+
 //charicter location veriables
 var gameChar_x;
 var gameChar_y;
@@ -105,7 +108,10 @@ function preload()
 function setup()
 {
     
-	createCanvas(1024, 576);
+	c = createCanvas(1024, 576);
+    c.parent('canvas');
+    c.style('display', 'block')
+
     floorPos_y = height * 3/4;
 	
     //object containing charaicter stats
@@ -118,8 +124,9 @@ function setup()
     //start of game mechanics.
     startGame();
     startGame_button = createButton("Start Game");
-    startGame_button.position(width/2.5, height/2);
-    startGame_button.style('font-size', '40px')
+    startGame_button.parent('canvas');
+    startGame_button.style('position','absolute');
+    startGame_button.style('font-size', '40px');
     startGame_button.mouseClicked(gameStart);
 }
 function gameStart()
