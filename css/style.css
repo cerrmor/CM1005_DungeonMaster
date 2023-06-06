@@ -32,7 +32,7 @@ body {
 #myButton:hover {
     background-color: greenyellow;
 }
-#myButton:focus{
+#myButton:active{
     background-color: darkgreen;
 }
 .showInstructions {
